@@ -16,7 +16,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="tb_registro")
-public class Chamado implements Serializable{ 
+public class Call implements Serializable{ 
   
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)

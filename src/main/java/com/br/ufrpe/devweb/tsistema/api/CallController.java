@@ -9,29 +9,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.br.ufrpe.devweb.tsistema.model.Chamado;
-import com.br.ufrpe.devweb.tsistema.service.ChamadoService;
+import com.br.ufrpe.devweb.tsistema.model.Call;
+import com.br.ufrpe.devweb.tsistema.service.CallService;
 
 @CrossOrigin
 @RestController
 @RequestMapping("/chamados")
-public class ChamadoController {
+public class CallController {
   
   @Autowired
-  public ChamadoService chamadoService;
+  public CallService callService;
 
   @PostMapping(path = "/add")
-  public Chamado save(@RequestBody Chamado customer) {
-    return chamadoService.save(customer);
+  public Call save(@RequestBody Call customer) {
+    return callService.save(customer);
   }
   
   @GetMapping(path = "/get/{id}")
-  public Chamado get(@PathVariable("id") Long id) {
-    return chamadoService.findOne(id);
+  public Call get(@PathVariable("id") Long id) {
+    return callService.findOne(id);
   }
   
   @PostMapping(path = "/update")
-  public Chamado update(@RequestBody Chamado chamado) {
-    return chamadoService.update(chamado);
+  public Call update(@RequestBody Call chamado) {
+    return callService.update(chamado);
   }
 }
