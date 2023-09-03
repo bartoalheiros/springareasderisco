@@ -14,7 +14,7 @@ import com.br.ufrpe.devweb.tsistema.service.CallService;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/chamados")
+@RequestMapping("/calls")
 public class CallController {
   
   @Autowired
@@ -31,7 +31,7 @@ public class CallController {
   }
   
   @PostMapping(path = "/update")
-  public Call update(@RequestBody Call chamado) {
-    return callService.update(chamado);
+  public Call update(@RequestBody Call call) {
+    return callService.update(call);
   }
 }

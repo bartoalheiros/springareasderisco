@@ -14,37 +14,37 @@ import lombok.AllArgsConstructor;
 @Service
 public class CallService {
   
-  public final CallRepository chamadoRepository;
+  public final CallRepository callRepository;
   
-  public Call save(Call chamado) {
-    return chamadoRepository.save(chamado);
+  public Call save(Call call) {
+    return callRepository.save(call);
   }
 
   public List<Call> findAll() {
-    return chamadoRepository.findAll();
+    return callRepository.findAll();
   }
   
   public Call findOne(Long id) {
-    Call chamado = chamadoRepository.getOne(id);
-    if (chamado == null) throw new CallNotFoundException(id);
+    Call call = callRepository.getOne(id);
+    if (call == null) throw new CallNotFoundException(id);
 
-    return chamado;
+    return call;
   }
 
-  public Call update(Call chamadoUpdated) {
-    Call chamado = chamadoRepository.getOne(chamadoUpdated.getProcesso_numero());
+  public Call update(Call callUpdated) {
+    Call call = callRepository.getOne(callUpdated.getProcesso_numero());
 
-    if (chamado == null) {
+    if (call == null) {
 
-      throw new CallNotFoundException(chamadoUpdated.getProcesso_numero());
+      throw new CallNotFoundException(callUpdated.getProcesso_numero());
 
     }else {
 
-      chamado.setLatitude(chamadoUpdated.getLatitude());
-      chamado.setLongitude(chamadoUpdated.getLongitude());
+      call.setLatitude(callUpdated.getLatitude());
+      call.setLongitude(callUpdated.getLongitude());
     }
 
-    return chamadoRepository.save(chamado);
+    return callRepository.save(call);
   }
   
 }
