@@ -16,11 +16,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+// @SuppressWarnings("serial")
+// @NoArgsConstructor
+// @AllArgsConstructor
+// @Getter
+// @Setter
+// @Table(name="tb_registro")
 @SuppressWarnings("serial")
-@NoArgsConstructor
+@Data
 @AllArgsConstructor
-@Getter
-@Setter
+@Entity
 @Table(name="tb_registro")
 public class Call implements Serializable{ 
   

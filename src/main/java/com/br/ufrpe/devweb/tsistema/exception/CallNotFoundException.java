@@ -8,10 +8,15 @@ public class CallNotFoundException extends  RuntimeException {
   
   private static final long serialVersionUID = 137744895179504666L;
   
-  private String msg;
+  final String msg;
 
   public CallNotFoundException(String msg) {
     this.msg = msg;
+  }
+
+  @Override
+  public String getMessage() {
+    return this.msg;
   }
 
 }

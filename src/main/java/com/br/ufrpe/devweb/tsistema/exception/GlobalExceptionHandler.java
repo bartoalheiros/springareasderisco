@@ -10,7 +10,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(CallNotFoundException.class)
     public ResponseEntity<String> handleCallNotFoundException(CallNotFoundException ex) {
-        return new ResponseEntity<>("Call not found: " + ex.getMessage(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
     // Outros métodos @ExceptionHandler para tratar exceções específicas
 }
