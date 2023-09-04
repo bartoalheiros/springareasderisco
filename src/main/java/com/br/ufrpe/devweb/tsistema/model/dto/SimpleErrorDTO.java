@@ -1,6 +1,5 @@
 package com.br.ufrpe.devweb.tsistema.model.dto;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;

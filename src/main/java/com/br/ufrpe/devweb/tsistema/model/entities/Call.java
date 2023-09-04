@@ -12,19 +12,12 @@ import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-// @SuppressWarnings("serial")
-// @NoArgsConstructor
-// @AllArgsConstructor
-// @Getter
-// @Setter
-// @Table(name="tb_registro")
 @SuppressWarnings("serial")
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="tb_registro")
 public class Call implements Serializable{ 
