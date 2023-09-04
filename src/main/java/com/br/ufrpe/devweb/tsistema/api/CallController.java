@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.br.ufrpe.devweb.tsistema.exception.CallNotFoundException;
-import com.br.ufrpe.devweb.tsistema.model.Call;
+import com.br.ufrpe.devweb.tsistema.model.entities.Call;
 import com.br.ufrpe.devweb.tsistema.service.CallService;
 
 @CrossOrigin
@@ -29,7 +29,7 @@ public class CallController {
   }
   
   @GetMapping(path = "/get/{id}")
-  public ResponseEntity<?> getCallById(@PathVariable("id") final Long id) {
+  public ResponseEntity<Call> getCallById(@PathVariable("id") final Long id) {
     return ResponseEntity.ok(callService.getCallById(id));
   }
   

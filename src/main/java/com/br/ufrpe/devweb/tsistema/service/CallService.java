@@ -7,7 +7,7 @@ import javax.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.br.ufrpe.devweb.tsistema.exception.CallNotFoundException;
-import com.br.ufrpe.devweb.tsistema.model.Call;
+import com.br.ufrpe.devweb.tsistema.model.entities.Call;
 import com.br.ufrpe.devweb.tsistema.repository.CallRepository;
 
 import lombok.AllArgsConstructor;

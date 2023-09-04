@@ -1,4 +1,4 @@
-package com.br.ufrpe.devweb.tsistema.model;
+package com.br.ufrpe.devweb.tsistema.model.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
