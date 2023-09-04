@@ -53,7 +53,25 @@
 			<scope>provided</scope>
 		</dependency>
 
-	</dependencies>
+	
+   <dependency>
+     <groupId>javax</groupId>
+     <artifactId>javaee-api</artifactId>
+     <version>8.0.1</version>
+   </dependency>
+
+	<!-- Dependência do JSON-B -->
+	<dependency>
+		<groupId>javax.json.bind</groupId>
+		<artifactId>javax.json.bind-api</artifactId>
+		<version>1.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.eclipse</groupId>
+		<artifactId>yasson</artifactId>
+		<version>1.0.9</version> <!-- Ou a versão mais recente disponível -->
+	</dependency>
+ </dependencies>
 
 	<build>
 		<plugins>

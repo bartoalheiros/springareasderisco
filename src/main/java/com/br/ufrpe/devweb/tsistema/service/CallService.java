@@ -2,10 +2,12 @@ package com.br.ufrpe.devweb.tsistema.service;
 
 import java.util.List;
 
+import javax.persistence.EntityNotFoundException;
+
 import org.springframework.stereotype.Service;
 
 import com.br.ufrpe.devweb.tsistema.exception.CallNotFoundException;
-import com.br.ufrpe.devweb.tsistema.model.Call;
+import com.br.ufrpe.devweb.tsistema.model.entities.Call;
 import com.br.ufrpe.devweb.tsistema.repository.CallRepository;
 
 import lombok.AllArgsConstructor;
@@ -24,11 +26,9 @@ public class CallService {
     return callRepository.findAll();
   }
   
-  public Call findOne(Long id) {
-    Call call = callRepository.getOne(id);
-    if (call == null) throw new CallNotFoundException(id);
-
-    return call;
+  public Call getCallById(Long id) {
+    return callRepository.findById(id)
+      .orElseThrow(() -> new CallNotFoundException(String.format("Call not found with ID %d",id)));
   }
 
   public Call update(Call callUpdated) {
@@ -36,7 +36,7 @@ public class CallService {
 
     if (call == null) {
 
-      throw new CallNotFoundException(callUpdated.getProcesso_numero());
+      //throw new CallNotFoundException(callUpdated.getProcesso_numero());
 
     }else {
 

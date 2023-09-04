@@ -1,4 +1,4 @@
-package com.br.ufrpe.devweb.tsistema.model;
+package com.br.ufrpe.devweb.tsistema.model.entities;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -10,10 +10,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @SuppressWarnings("serial")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="tb_registro")
 public class Call implements Serializable{ 
@@ -22,7 +26,7 @@ public class Call implements Serializable{
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long processo_numero;
   
-  private Integer ano;
+  private String ano;
   
   private String mes;
  

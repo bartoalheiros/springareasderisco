@@ -31,3 +31,4 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+.vscode/launch.json
