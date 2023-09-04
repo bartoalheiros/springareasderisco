@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class CallNotFoundException extends  RuntimeException {
   
   private static final long serialVersionUID = 137744895179504666L;
+  
+  private String msg;
 
-  public CallNotFoundException(Long id) {
+  public CallNotFoundException(String msg) {
+    this.msg = msg;
   }
 
 }

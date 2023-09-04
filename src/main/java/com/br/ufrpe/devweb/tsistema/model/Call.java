@@ -10,11 +10,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @SuppressWarnings("serial")
-@Data
-@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Table(name="tb_registro")
 public class Call implements Serializable{ 
   
@@ -22,7 +28,7 @@ public class Call implements Serializable{
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long processo_numero;
   
-  private Integer ano;
+  private String ano;
   
   private String mes;
  
