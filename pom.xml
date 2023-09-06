@@ -71,6 +71,12 @@
 		<artifactId>yasson</artifactId>
 		<version>1.0.9</version> <!-- Ou a versão mais recente disponível -->
 	</dependency>
+
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <optional>true</optional>
+    </dependency>
  </dependencies>
 
 	<build>
