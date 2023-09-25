@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AreasDeRiscoRecifeApplication<AreasDeRiscoRecife>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.br.ufrpe.devWeb.tsistema.AreasDeRiscoRecifeApplication",
+            "projectName": "AreasDeRiscoRecife",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AreasDeRiscoRecifeApplication<AreasDeRiscoRecife>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.br.ufrpe.devweb.tsistema.AreasDeRiscoRecifeApplication",
+            "projectName": "AreasDeRiscoRecife",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RiskAreasApplication<AreasDeRiscoRecife>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.br.ufrpe.devweb.tsistema.RiskAreasApplication",
+            "projectName": "AreasDeRiscoRecife",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
